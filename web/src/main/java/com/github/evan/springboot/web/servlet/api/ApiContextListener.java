@@ -4,7 +4,6 @@ import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 
-@WebListener(value = "ApiContextListener")
 public class ApiContextListener implements ServletContextListener{
 
 

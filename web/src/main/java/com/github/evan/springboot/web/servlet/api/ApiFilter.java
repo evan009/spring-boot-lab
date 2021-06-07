@@ -6,12 +6,6 @@ import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.annotation.WebInitParam;
 
-@WebFilter(filterName = "AnnoFilter",
-            urlPatterns = "/annotaion/servlet/*",
-        initParams = {
-        @WebInitParam(name = "initParam1", value = "initValue1"),
-        @WebInitParam(name = "initParam2", value = "initValue2")
-})
 public class ApiFilter implements Filter {
 
     private ServletContext servletContext;

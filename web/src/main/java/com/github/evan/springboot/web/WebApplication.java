@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 
 @SpringBootApplication
-@ServletComponentScan(basePackages = "com.github.evan.springboot.web.servlet.annotation")
+@ServletComponentScan(basePackages = "com.github.evan.springboot.web.servlet.anno")
 public class WebApplication {
 
     public static void main(String[] args) {
