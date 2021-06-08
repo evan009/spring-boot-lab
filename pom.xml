@@ -10,7 +10,8 @@
 
     <modules>
         <module>web</module>
-<!--        <module>data-jdbc</module>-->
+        <module>embedded-container</module>
+        <!--        <module>data-jdbc</module>-->
 <!--        <module>data-mybatis</module>-->
 <!--        <module>data-jpa</module>-->
 <!--        <module>data-nosql</module>-->

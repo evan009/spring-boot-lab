@@ -7,6 +7,7 @@ import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.ServletListenerRegistrationBean;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
+import org.springframework.core.Ordered;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -34,6 +35,7 @@ public class ApiServletRegister {
         filterRegistrationBean.addUrlPatterns("/api/servlet/*");
         filterRegistrationBean.addInitParameter("initParam1","initValue1");
         filterRegistrationBean.addInitParameter("initParam2","initValuee2");
+        filterRegistrationBean.setOrder(Ordered.HIGHEST_PRECEDENCE+2);
         return filterRegistrationBean;
     }
 
