@@ -108,3 +108,29 @@ public class AnnoServlet extends HttpServlet {
 spring.mvc.static-path-pattern=/resources/**
 spring.mvc.format.date-time=yyyy-MM-dd HH:mm:ss
 ```
+
+
+## 数据库
+
+### 数据库连接
+
+- 多数据源
+- druid数据库连接池
+- 内置数据HikariCp tomacat dbcp2
+- JNDI
+
+### 嵌入式数据库
+
+- H2
+- HSQL
+- Derby
+
+###  Spring Framework JdbcTemplate 
+
+spring.data.template.*
+
+### Spring Data JPA
+
+### Mybatis 
+
+通用MyBatis 框架
