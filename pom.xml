@@ -12,7 +12,7 @@
         <module>web</module>
         <module>data</module>
         <module>embedded-container</module>
-<!--        <module>data-nosql</module>-->
+        <module>external-config</module>
 <!--        <module>cache</module>-->
     </modules>
 
@@ -24,6 +24,7 @@
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <spring-boot.version>2.3.7.RELEASE</spring-boot.version>
         <mybatis.srping-boot>2.1.4</mybatis.srping-boot>
+        <alibaba.fast.json>1.2.71</alibaba.fast.json>
     </properties>
 
     <dependencyManagement>
@@ -58,6 +59,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${alibaba.fast.json}</version>
         </dependency>
     </dependencies>
 
