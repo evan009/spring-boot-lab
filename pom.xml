@@ -13,7 +13,7 @@
         <module>data</module>
         <module>embedded-container</module>
         <module>external-config</module>
-<!--        <module>cache</module>-->
+        <module>auto-configuration</module>
     </modules>
 
 
