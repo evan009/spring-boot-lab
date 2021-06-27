@@ -1,0 +1,3 @@
+org.springframework.context.ApplicationListener=\
+com.github.evan.springboot.config.listener.ReadyEventCustomerListner,\
+com.github.evan.springboot.config.listener.ServletWebServerInitializedCustomerListner
