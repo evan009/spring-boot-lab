@@ -11,9 +11,7 @@
 
     <artifactId>embedded-container</artifactId>
     <packaging>war</packaging>
-
-    <name>embedded-container Maven Webapp</name>
-    <!-- FIXME change it to the project's website -->
+    <name>embedded-container</name>
     <url>http://www.example.com</url>
 
     <properties>
