@@ -1,47 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.github.evan.springboot</groupId>
         <artifactId>spring-boot-lab</artifactId>
         <version>1.0.0</version>
     </parent>
-
-    <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.evan.springboot</groupId>
     <artifactId>web</artifactId>
     <version>1.0.0</version>
+    <packaging>pom</packaging>
     <name>web</name>
     <description>Demo project for Spring Boot</description>
 
-    <dependencies>
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-        </dependency>
-        <!-- jackson默认只会支持的json。若要xml的支持，需要额外导入如下包 -->
-        <dependency>
-            <groupId>com.fasterxml.jackson.dataformat</groupId>
-            <artifactId>jackson-dataformat-xml</artifactId>
-        </dependency>
-    </dependencies>
-
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <excludes>
-                        <exclude>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                        </exclude>
-                    </excludes>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+    <modules>
+        <module>web-servlet</module>
+        <module>web-static-resource</module>
+        <module>web-jsp</module>
+    </modules>
 
 </project>

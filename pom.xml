@@ -10,14 +10,11 @@
 
     <modules>
         <module>web</module>
+        <module>data</module>
         <module>embedded-container</module>
         <module>data-pool</module>
-
-        <!--        <module>data-jdbc</module>-->
-<!--        <module>data-mybatis</module>-->
-<!--        <module>data-jpa</module>-->
-<!--        <module>data-nosql</module>-->
-<!--        <module>cache</module>-->
+        <module>external-config</module>
+        <module>auto-configuration</module>
     </modules>
 
 
@@ -26,7 +23,9 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
-        <spring-boot.version>2.3.11.RELEASE</spring-boot.version>
+        <spring-boot.version>2.3.7.RELEASE</spring-boot.version>
+        <mybatis.srping-boot>2.1.4</mybatis.srping-boot>
+        <alibaba.fast.json>1.2.71</alibaba.fast.json>
     </properties>
 
     <dependencyManagement>
@@ -48,6 +47,10 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <scope>runtime</scope>
             <optional>true</optional>
@@ -61,6 +64,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${alibaba.fast.json}</version>
         </dependency>
     </dependencies>
 

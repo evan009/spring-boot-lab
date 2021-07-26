@@ -2,29 +2,34 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
     <parent>
-        <artifactId>spring-boot-lab</artifactId>
         <groupId>com.github.evan.springboot</groupId>
+        <artifactId>web</artifactId>
         <version>1.0.0</version>
     </parent>
-    <modelVersion>4.0.0</modelVersion>
-    <artifactId>embedded-container</artifactId>
-    <name>embedded-container</name>
-	<packaging>war</packaging>
-    <url>http://www.example.com</url>
-
+    <groupId>com.github.evan.springboot</groupId>
+    <artifactId>web-static-resource</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+    <name>web-static-resource Maven Webapp</name>
 
     <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.11</version>
-            <scope>test</scope>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-thymeleaf</artifactId>-->
+<!--        </dependency>-->
     </dependencies>
 
+
+
     <build>
-        <finalName>embedded-container</finalName>
+        <finalName>web-static-resource</finalName>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
