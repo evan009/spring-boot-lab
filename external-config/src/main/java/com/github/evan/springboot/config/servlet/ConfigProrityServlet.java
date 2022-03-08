@@ -1,13 +1,18 @@
 package com.github.evan.springboot.config.servlet;
 
-import com.alibaba.fastjson.JSONObject;
-import org.springframework.beans.factory.annotation.Value;
-
-import javax.servlet.*;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebInitParam;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.beans.factory.annotation.Value;
+
+import com.alibaba.fastjson.JSONObject;
 
 @WebServlet(name = "ConfigProrityServlet", value = "/servlet/",
         initParams = {
@@ -29,7 +34,7 @@ public class ConfigProrityServlet extends HttpServlet {
         PrintWriter printWriter = response.getWriter();
         JSONObject result = new JSONObject();
         result.put("name", name);
-        result.put("prority", prority);
+        result.put("priority", prority);
         printWriter.write(result.toJSONString());
         printWriter.close();
     }

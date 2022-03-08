@@ -1,21 +1,20 @@
 package com.github.evan.springboot.config;
 
-import com.github.evan.springboot.config.listener.EnvironmentPreparedEventCustomerListner;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.context.EnvironmentAware;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ImportResource;
 import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.core.env.Environment;
 import org.springframework.core.env.MapPropertySource;
 import org.springframework.core.env.MutablePropertySources;
 
-import java.util.HashMap;
-import java.util.Map;
+import com.github.evan.springboot.config.listener.EnvironmentPreparedEventCustomerListener;
+import lombok.extern.slf4j.Slf4j;
 
 @SpringBootApplication
 @ServletComponentScan(basePackages = "com.github.evan.springboot.config.servlet")
@@ -29,7 +28,7 @@ public class ExternalConfigApplication implements EnvironmentAware {
 
         // 添加属性外部化配置
         Map<String, Object> javaCodeProperties = new HashMap<>();
-        javaCodeProperties.put("external.config.demo.prority", 17);
+        javaCodeProperties.put("external.config.demo.priority", 17);
         javaCodeProperties.put("external.config.demo.name",
             "Default properties (specified by setting SpringApplication.setDefaultProperties)");
         application.setDefaultProperties(javaCodeProperties);
@@ -37,8 +36,8 @@ public class ExternalConfigApplication implements EnvironmentAware {
         application.setAdditionalProfiles("prod");
 
         // 通过Java方式添加监听器
-        EnvironmentPreparedEventCustomerListner preparedEventCustomerListner =
-            new EnvironmentPreparedEventCustomerListner();
+        EnvironmentPreparedEventCustomerListener preparedEventCustomerListner =
+            new EnvironmentPreparedEventCustomerListener();
         application.addListeners(preparedEventCustomerListner);
         application.run(args);
     }
